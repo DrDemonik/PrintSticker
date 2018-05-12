@@ -1,7 +1,9 @@
-﻿// Learn more about F# at http://fsharp.org
-// See the 'F# Tutorial' project for more help.
+﻿open System
 
+[<STAThread>]
 [<EntryPoint>]
 let main argv = 
-    printfn "%A" argv
+    argv|>function
+        |[|path|]->path|>FN.PrintStickerFromMnf
+        |_->()
     0 // return an integer exit code
