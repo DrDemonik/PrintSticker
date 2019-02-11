@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "PrintSticker", "PrintSticker\PrintSticker.fsproj", "{CE0EC728-A3BB-4F46-9A9C-35C199A4ADB9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintStickerCSharpConsole", "PrintStickerCSharpConsole\PrintStickerCSharpConsole.csproj", "{4710EB74-49D7-4913-8360-E76BB419D207}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{CE0EC728-A3BB-4F46-9A9C-35C199A4ADB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE0EC728-A3BB-4F46-9A9C-35C199A4ADB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE0EC728-A3BB-4F46-9A9C-35C199A4ADB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4710EB74-49D7-4913-8360-E76BB419D207}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4710EB74-49D7-4913-8360-E76BB419D207}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4710EB74-49D7-4913-8360-E76BB419D207}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4710EB74-49D7-4913-8360-E76BB419D207}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

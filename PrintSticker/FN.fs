@@ -9,6 +9,7 @@ open System.Windows
 open System.Windows.Controls
 open System.Windows.Media
 open Zen.Barcode
+open System.Printing
 
 
 let regEtik=new Regex("PP010,125:DIR1:AN1:FT\"Swiss 721 Bold BT\",18,00:PT\"(.*)\"\r"+
@@ -52,12 +53,13 @@ type Drawing.Bitmap with
 
 let PrintGrid(grid:Grid)=
     let pd=new System.Windows.Controls.PrintDialog()
+    pd.PrintQueue<-(new LocalPrintServer()).DefaultPrintQueue
     let size=new System.Windows.Size(pd.PrintableAreaWidth,pd.PrintableAreaHeight)
     grid.Measure(size)
     grid.Arrange(new System.Windows.Rect(new System.Windows.Point(0.0,0.0),size))
     (grid.Parent:?>Window).Show()|>ignore
     Threading.Thread.Sleep(1000)
-    //pd.PrintVisual(grid,"Sticker")
+    pd.PrintVisual(grid,"Sticker")
 
 let EtiketParse path=
     let txt=File.ReadAllText(path,enc)
